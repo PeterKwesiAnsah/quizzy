@@ -1,5 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 
 export const Question = ({ question }: { question: string }) => {
-  return <div>Question</div>;
+  const containeRef = useRef<HTMLDivElement | null>(null);
+  React.useEffect(() => {
+    if (containeRef.current) {
+      containeRef.current.innerHTML = question;
+    }
+  }, []);
+  return (
+    <div
+      ref={containeRef}
+      className="max-w-sm rounded overflow-hidden shadow-lg"
+    ></div>
+  );
 };

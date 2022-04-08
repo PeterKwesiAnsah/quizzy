@@ -8,7 +8,7 @@ const index = () => {
   return (
     <div className=" grid justify-center mt-[10%] text-center gap-2">
       {quizQuery.isSuccess ? (
-        <PlayQuiz></PlayQuiz>
+        <PlayQuiz results={quizQuery.data.results}></PlayQuiz>
       ) : (
         <img src={loader} alt="Loading Quiz"></img>
       )}

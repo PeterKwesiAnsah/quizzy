@@ -1,14 +1,17 @@
-import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { fetchAsync } from "./lib";
+import { QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { BrowserRouter as Router } from "react-router-dom";
+import { client } from "./lib";
+import AppRoutes from "./routes";
 
 function App() {
-  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold">Hello world!</h1>
-    </div>
+    <QueryClientProvider client={client}>
+      <Router>
+        <AppRoutes></AppRoutes>
+      </Router>
+      <ReactQueryDevtools></ReactQueryDevtools>
+    </QueryClientProvider>
   );
 }
 

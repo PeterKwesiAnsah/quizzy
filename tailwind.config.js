@@ -7,6 +7,12 @@ module.exports = {
     extend: {
       fontFamily:{
         'mulish':["Mulish"]
+      },
+      colors:{
+        blue:{
+          500:"#46dff0",
+          700:"#46b4f0"
+        }
       }
     },
   },

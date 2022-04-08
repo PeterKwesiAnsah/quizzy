@@ -1,16 +1,11 @@
 import React, { useRef } from "react";
 
 export const Question = ({ question }: { question: string }) => {
-  const containeRef = useRef<HTMLDivElement | null>(null);
+  const paragraphRef = useRef<HTMLParagraphElement | null>(null);
   React.useEffect(() => {
-    if (containeRef.current) {
-      containeRef.current.innerHTML = question;
+    if (paragraphRef.current) {
+      paragraphRef.current.innerHTML = question;
     }
-  }, []);
-  return (
-    <div
-      ref={containeRef}
-      className="max-w-sm rounded overflow-hidden shadow-lg"
-    ></div>
-  );
+  }, [question]);
+  return <p ref={paragraphRef} className="text-gray-700 text-base"></p>;
 };

@@ -9,7 +9,7 @@ const index = () => {
   const correctChoices = choices.filter(({ correct }) => correct).length;
   const choicesLength = choices.length;
   return (
-    <div className="grid justify-center mt-[10%] text-center  gap-2">
+    <div className="grid justify-center mt-[2.5%] text-center  gap-2">
       <span className="font-mulish text-2xl font-medium">You scored</span>
       <div className="flex items-baseline">
         <h1 className="font-bold text-7xl text-blue-700">

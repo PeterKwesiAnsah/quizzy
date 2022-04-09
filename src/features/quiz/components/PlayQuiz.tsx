@@ -4,7 +4,7 @@ import { Category, Question, Tracker } from ".";
 import { useQuestionTracker } from "../hooks/useQuestionTracker";
 import { Quiz } from "../types";
 import { useDispatch } from "react-redux";
-import { answer } from "../slice";
+import { answer, reset } from "../slice";
 
 export const PlayQuiz = ({ results }: { results: Quiz[] }) => {
   const navigate = useNavigate();
@@ -31,6 +31,9 @@ export const PlayQuiz = ({ results }: { results: Quiz[] }) => {
       },
       [curQIndex, curQuestion]
     );
+  React.useEffect(() => {
+    dispatch(reset());
+  }, []);
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg text-left border-2 border-gray-100">
       <div className="px-6 py-4">

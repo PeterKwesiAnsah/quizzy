@@ -19,10 +19,13 @@ export const quizSlice = createSlice({
     answer: (state, action: PayloadAction<quizState["results"][0]>) => {
       state.results.push(action.payload);
     },
+    reset: (state) => {
+      state.results = [];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { answer } = quizSlice.actions;
+export const { answer,reset } = quizSlice.actions;
 
 export default quizSlice.reducer;

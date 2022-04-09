@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export type Question = {
+  num: number;
+  correct: boolean;
+  choice: "True" | "False";
+};
 export type quizState = {
-  results: {
-    num: number;
-    correct: boolean;
-    choice: "True" | "False";
-  }[];
+  results: Question[];
 };
 
 const initialState: quizState = {
@@ -16,7 +17,7 @@ export const quizSlice = createSlice({
   name: "quiz",
   initialState,
   reducers: {
-    answer: (state, action: PayloadAction<quizState["results"][0]>) => {
+    answer: (state, action: PayloadAction<Question>) => {
       state.results.push(action.payload);
     },
     reset: (state) => {
@@ -26,6 +27,6 @@ export const quizSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { answer,reset } = quizSlice.actions;
+export const { answer, reset } = quizSlice.actions;
 
 export default quizSlice.reducer;

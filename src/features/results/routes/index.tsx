@@ -5,9 +5,9 @@ import { Tracker } from "../../quiz/components";
 import { Status } from "../components";
 
 const index = () => {
-  const choices = useSelector((state: RootState) => state.quiz.results);
-  const correctChoices = choices.filter(({ correct }) => correct).length;
-  const choicesLength = choices.length;
+  const quiz = useSelector((state: RootState) => state.quiz.results);
+  const correctChoices = quiz.filter(({ correct }) => correct).length;
+  const choicesLength = quiz.length;
   return (
     <div className="grid justify-center mt-[2.5%] text-center  gap-2">
       <span className="font-mulish text-2xl font-medium">You scored</span>
@@ -19,15 +19,11 @@ const index = () => {
           {`(${correctChoices + "/" + choicesLength})`}
         </span>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8">
-        {choices.map((choice, index) => (
-          <Status
-            questionNum={choice.num}
-            choice={choice.correct}
-            key={index}
-          ></Status>
+      <ol className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8">
+        {quiz.map((question, index) => (
+          <Status {...question} key={index}></Status>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 };

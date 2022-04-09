@@ -8,10 +8,9 @@ import { RootState } from "../store";
 export const TakeQuiz = ({ children }: { children: ReactChild }) => {
   const quizLength =
     client.getQueryData<API_RESPONSE<Quiz>>("quiz")?.results.length;
-  console.log(quizLength);
-  const isQuizTaken =
-    useSelector((state: RootState) => state.quiz.results).length > 0;
-  if (isQuizTaken) {
+  const isQuizCompleted =
+    useSelector((state: RootState) => state.quiz.results).length === quizLength;
+  if (isQuizCompleted) {
     return <>{children}</>;
   }
   return (

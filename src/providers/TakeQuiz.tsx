@@ -1,9 +1,14 @@
 import React, { ReactChild } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { API_RESPONSE, Quiz } from "../features/quiz/types";
+import { client } from "../lib";
 import { RootState } from "../store";
 
 export const TakeQuiz = ({ children }: { children: ReactChild }) => {
+  const quizLength =
+    client.getQueryData<API_RESPONSE<Quiz>>("quiz")?.results.length;
+  console.log(quizLength);
   const isQuizTaken =
     useSelector((state: RootState) => state.quiz.results).length > 0;
   if (isQuizTaken) {

@@ -6,7 +6,7 @@ export const Tracker = ({
   total: number;
 }) => {
   return (
-    <div className="text-right">
+    <div className="text-center mt-10">
       <span className="font-mulish font-bold  text-orange-500">
         {current + 1}
       </span>

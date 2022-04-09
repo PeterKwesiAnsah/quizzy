@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const index = () => {
   return (
-    <div className=" grid justify-center mt-[10%] text-center gap-2">
+    <div className=" grid justify-center  mt-[50%] md:mt-[10%] text-center gap-2">
       <h1 className="font-mulish text-2xl font-medium">Welcome to this Game</h1>
       <span className="text-zinc-500">
         You will be presented with 15 true or false questions.

@@ -35,12 +35,12 @@ export const PlayQuiz = ({ results }: { results: Quiz[] }) => {
     dispatch(reset());
   }, []);
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg text-left border-2 border-gray-100">
+    <div className="max-w-xs md:max-w-lg rounded overflow-hidden shadow-lg text-left border-2 border-gray-100">
       <div className="px-6 py-4">
         <Category category={curQuestion.category}></Category>
         <Question question={curQuestion.question}></Question>
-        <Tracker current={curQIndex} total={results.length}></Tracker>
-        <div className="mt-2 flex justify-center gap-2">
+
+        <div className="mt-10 flex justify-center gap-2">
           <button
             type="button"
             onClick={handleChoice}
@@ -58,6 +58,7 @@ export const PlayQuiz = ({ results }: { results: Quiz[] }) => {
             False
           </button>
         </div>
+        <Tracker current={curQIndex} total={results.length}></Tracker>
       </div>
     </div>
   );

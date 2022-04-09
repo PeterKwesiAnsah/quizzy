@@ -1,6 +1,5 @@
 import React from "react";
-import { ErrorBoundaryProps, FallbackProps } from "react-error-boundary";
-import { Link } from "react-router-dom";
+import { FallbackProps } from "react-error-boundary";
 
 export const FallBack = (props: FallbackProps) => {
   return (

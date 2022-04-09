@@ -5,7 +5,7 @@ A 15-question trivia game.
 ## Getting Started
 
 ```bash
-git clone -b starter https://github.com/PeterKwesiAnsah/quizzy.git
+git clone https://github.com/PeterKwesiAnsah/quizzy.git
 cd quizzy
 yarn install
 yarn run dev

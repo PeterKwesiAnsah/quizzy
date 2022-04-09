@@ -5,6 +5,7 @@ import { client } from "./lib";
 import AppRoutes from "./routes";
 import { Provider } from "react-redux";
 import store from "./store";
+import { Toaster } from "react-hot-toast";
 import { ErrorBoundary } from "react-error-boundary";
 import { FallBack } from "./components";
 
@@ -22,7 +23,7 @@ function App() {
             <AppRoutes></AppRoutes>
           </Router>
         </Provider>
-
+        <Toaster></Toaster>
         <ReactQueryDevtools></ReactQueryDevtools>
       </QueryClientProvider>
     </ErrorBoundary>

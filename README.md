@@ -2,7 +2,6 @@
 
 A 15-question trivia game.
 
-
 ## Getting Started
 
 ```bash
@@ -15,6 +14,3 @@ yarn run dev
 This will clone the branch, install the dependencies and start the development server.
 
 The app will be running at [http://localhost:3000](http://localhost:3000).
-
-
-```

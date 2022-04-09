@@ -5,9 +5,6 @@ import Results from "../features/results/routes";
 import { NotFound } from "../components";
 import { TakeQuiz } from "../providers";
 const Index = () => {
-  //TODO:reset store
-  //TODO: wrap a provider  around results ...show results onñly when there's one
-
   return (
     <Routes>
       <Route path="/" element={<Home></Home>}></Route>

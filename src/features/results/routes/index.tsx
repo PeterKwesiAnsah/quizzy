@@ -11,7 +11,7 @@ const index = () => {
   return (
     <div className="grid justify-center mt-[2.5%] text-center  gap-2">
       <span className="font-mulish text-2xl font-medium">You scored</span>
-      <div className="flex items-baseline">
+      <div className="flex items-baseline my-0 mx-auto gap-1">
         <h1 className="font-bold text-7xl text-blue-700">
           {Math.round((correctChoices / choicesLength) * 100) + "%"}
         </h1>
@@ -20,7 +20,7 @@ const index = () => {
         </span>
       </div>
 
-      <ul className="flex flex-col gap-y-2 mt-2 text-center">
+      <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
         {choices.map((choice, index) => (
           <Status
             questionNum={choice.num}

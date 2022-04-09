@@ -11,7 +11,10 @@ export const Status = ({
 }) => {
   return (
     <li className="list-none flex gap-2 gap-y-3 my-0 mx-auto">
-      <img src={choice ? correct : incorrect} alt="correct answer"></img>
+      <img
+        src={choice ? correct : incorrect}
+        alt={choice ? "correct" : "incorrect"}
+      ></img>
       <span className="text-zinc-500">Question {questionNum}</span>
     </li>
   );

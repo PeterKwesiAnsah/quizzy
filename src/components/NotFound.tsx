@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const NotFound = () => {
   return (
     <div className="grid  place-items-center mt-[5%]  auto-rows-min gap-4">
-      <h1 className="text-2xl md:text-9xl font-bold">404</h1>
+      <h1 className="text-5xl md:text-9xl font-bold">404</h1>
       <div className="flex gap-2 items-end">
         <span>Lost... ?</span>
         <Link to="/">

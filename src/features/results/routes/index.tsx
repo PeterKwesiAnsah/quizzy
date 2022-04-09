@@ -19,8 +19,7 @@ const index = () => {
           {`(${correctChoices + "/" + choicesLength})`}
         </span>
       </div>
-
-      <ul className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
+      <ul className="grid grid-cols-1 md:grid-cols-5 gap-4 mt-8">
         {choices.map((choice, index) => (
           <Status
             questionNum={choice.num}

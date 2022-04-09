@@ -7,7 +7,7 @@ export const FallBack = (props: FallbackProps) => {
       role="alert"
       className="grid  place-items-center mt-[5%]  auto-rows-min gap-4"
     >
-      <h1 className="text-2xl md:text-9xl font-bold text-red-500">Ooops....</h1>
+      <h1 className="text-5xl md:text-9xl font-bold text-red-500">Ooops....</h1>
 
       <button
         onClick={props.resetErrorBoundary}
